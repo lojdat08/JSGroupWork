@@ -1,0 +1,2 @@
+# JSGroupWork
+Idk project prostě
