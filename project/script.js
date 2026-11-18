@@ -2,14 +2,14 @@ var posun = 0;
 
 function startTime() {
   let c = new Date();
-  c.setMinutes(c.getMinutes() + posun);
+  c.setMinutes(Number(c.getMinutes()) + Number(posun));
   let h = c.getHours();
   let m = c.getMinutes();
   let s = c.getSeconds();
   h = String(h).padStart(2, 0);
   m = String(m).padStart(2, 0);
   s = String(s).padStart(2, 0);
-  document.querySelector(".txt").innerHTML = h + ":" + m + ":" + s;
+  document.querySelector(".timerTxt").innerHTML = h + ":" + m + ":" + s;
   document.querySelector(".datum").innerHTML = datum(c);
   setTimeout(startTime, 1000);
 }
