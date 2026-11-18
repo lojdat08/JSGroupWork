@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="VideoText">
+      <h3 style="text-align: center">Info z videa</h3>
+      <p>
+        JavaScript je interpretovaný narozdíl od programmovacích jazyků, které
+        jsou kompilované, například C/C++/C# podle kterých je i částečně
+        syntaxe.
+      </p>
+      <p>
+        Součástí jazyka je i garbage collector, který se stará o odstraňování
+        nepoužívaných proměných.
+      </p>
+      <p>
+        Jeden z prostředků, který se používá v JavaScriptu, je WebAsembly, který
+        soluží jako prostředník mezi kompilovaným kódem a prohlížečem. Kód,
+        například v C#, je možné přeložit do WebAsembly, který dokáže prohlížeč
+        použít.
+      </p>
+      <p>
+        Pokud by jsme chtěli JavaScript použít na server jednou z možností je
+        Node.js
+      </p>
+      <h4>Promise, Resolve, Await</h4>
+      <p><b>Promise</b> - Soluží jako příslib vrácení hodnoty.</p>
+      <p><b>Resolve</b> - Je funkce která vrací hodnotu Promise jako úspěšnou.</p>
+      <p><b>Await</b> - Je označení pro asynchroní fuknce a je potřeba počkat na vrácenou hodnotu.</p>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            style="width: 100%; height: 100%; object-fit: fill"
+            src="Images/HelloKitty.png"
+            alt="Slide1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            style="width: 100%; height: 100%; object-fit: fill"
+            src="Images/jezek.png"
+            alt="Slide2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            style="width: 100%; height: 100%; object-fit: fill"
+            src="Images/men.jpg"
+            alt="Slide3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            style="width: 100%; height: 100%; object-fit: fill"
+            src="Images/novacek.png"
+            alt="Slide4"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="scrip.js"></script>
+    <script src="swiper.js"></script>
+  </body>
+</html>
