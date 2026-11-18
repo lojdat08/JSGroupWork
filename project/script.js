@@ -1,29 +1,87 @@
-let posun = Number(localStorage.getItem("posun")) || 0;
+var posun = 0;
 
-function startTime(){
-let c=new Date();
-c.setMinutes(c.getMinutes() + posun);
-let h=c.getHours();
-let m=c.getMinutes();
-let s=c.getSeconds();
-h = checkTime(h);
-m = checkTime(m);
-s = checkTime(s);
-document.querySelector(".txt").innerHTML =  h + ":" + m + ":" + s;
-document.querySelector(".datum").innerHTML = datum(c);
-setTimeout(startTime, 1000);
+function startTime() {
+  let c = new Date();
+  c.setMinutes(c.getMinutes() + posun);
+  let h = c.getHours();
+  let m = c.getMinutes();
+  let s = c.getSeconds();
+  h = String(h).padStart(2, 0);
+  m = String(m).padStart(2, 0);
+  s = String(s).padStart(2, 0);
+  document.querySelector(".txt").innerHTML = h + ":" + m + ":" + s;
+  document.querySelector(".datum").innerHTML = datum(c);
+  setTimeout(startTime, 1000);
 }
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};
-  return i;
+
+function datum(t) {
+  let dny = [
+    "neděle",
+    "pondělí",
+    "úterý",
+    "středa",
+    "čtvrtek",
+    "pátek",
+    "sobota",
+  ];
+  let mesice = [
+    "ledna",
+    "února",
+    "března",
+    "dubna",
+    "května",
+    "června",
+    "července",
+    "srpna",
+    "září",
+    "října",
+    "listopadu",
+    "prosince",
+  ];
+  return (
+    dny[t.getDay()] +
+    " " +
+    t.getDate() +
+    ". " +
+    mesice[t.getMonth()] +
+    " " +
+    t.getFullYear()
+  );
 }
-function datum(t){
-    let dny = ["neděle", "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"];
-    let mesice = ["ledna", "února", "března", "dubna", "května", "června", "července", "srpna", "září", "října", "listopadu", "prosince"];
-    return dny[t.getDay()] + " " + t.getDate() + ". " + mesice[t.getMonth()] + " " + t.getFullYear();
-}
-function nastavPosun(){
-    posun = Number(document.querySelector("#posun").value);
-    localStorage.setItem("posun", posun);
-}
+
+//------------------------------------------------nastavení------------------------------------------------
+
+const nastaveni = document.querySelector(".nastaveni");
+const menu = document.querySelector(".menu");
+const ulozit = document.querySelector(".ulozit");
+const posunobjekt = document.querySelector(".posun");
+const alertBox = document.querySelector(".oznameni");
+
+var alertTimeout;
+
+nastaveni.addEventListener("click", function () {
+  menu.classList.toggle("menu--open");
+});
+
+ulozit.addEventListener("click", function () {
+  posun = posunobjekt.value;
+
+  if (posun === "") return;
+
+  let znamenko = "";
+  if (posun > 0) {
+    znamenko = "+";
+  }
+
+  alertBox.innerHTML = "Nastavení uloženo: " + znamenko + posun + " min";
+  alertBox.classList.add("alert--show");
+
+  clearTimeout(alertTimeout);
+  alertTimeout = setTimeout(function () {
+    alertBox.classList.remove("alert--show");
+  }, 2500);
+});
+
+//------------------------------------------------nastavení------------------------------------------------
+
 startTime();

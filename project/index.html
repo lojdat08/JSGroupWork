@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="startTime()">
-<div class="txt"></div>
-<div class="datum"></div>
-<input type="number" id="posun">
-<button onclick="nastavPosun()">Nastavit posun</button>
-<script src="script.js"></script>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="startTime()">
+    <div class="txt"></div>
+    <div class="datum"></div>
+    <input type="number" id="posun" />
+    <button onclick="nastavPosun()">Nastavit posun</button>
+    
+    <div class="oznameni"></div>
+    <button class="nastaveni">Nastaveni</button>
+    <div class="menu">
+      <p>Nastav posun (v minutach):</p>
+      <input type="number" class="posun" placeholder="např. 90 nebo -120" />
+      <button class="ulozit">Ulozit</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
