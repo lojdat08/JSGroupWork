@@ -1,150 +1,151 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #222;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .txt {
-    font-size: clamp(40px, 12vw, 90px);
-    font-weight: bold;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+  font-size: clamp(40px, 12vw, 90px);
+  font-weight: bold;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .datum {
-    font-size: clamp(16px, 4vw, 24px);
-    color: #555;
-    margin-top: 5px;
-    margin-bottom: 25px;
+  font-size: clamp(16px, 4vw, 24px);
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 
-.nastaveni, .ulozit {
-    padding: 10px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
+.nastaveni,
+.ulozit {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
 }
 
-.nastaveni:hover, .ulozit:hover {
-    background-color: #eaeaea;
+.nastaveni:hover,
+.ulozit:hover {
+  background-color: #eaeaea;
 }
 
 .menu {
-    display: none;
-    width: 100%;
-    max-width: 260px;
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
+  display: none;
+  width: 100%;
+  max-width: 260px;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .menu--open {
-    display: block;
+  display: block;
 }
 
 .menu p {
-    margin-bottom: 10px;
-    font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .menu input {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .ulozit {
-    width: 100%;
-    background-color: #222;
-    color: #fff;
-    border: none;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  border: none;
 }
 
 .ulozit:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .alert {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 6px;
-    width: max-content;
-    max-width: 90%;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: max-content;
+  max-width: 90%;
 
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 .alert--show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .oznameni {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 6px;
-    width: max-content;
-    max-width: 90%;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: max-content;
+  max-width: 90%;
 
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 .alert--show {
-    opacity: 1;
+  opacity: 1;
 }
 
-.timer{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.timer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.timerTxt{
-    width: 500px;
-    top: 0;
-    position: relative;
-    font-size: 80px;      
-    text-align: center;
+.timerTxt {
+  width: 500px;
+  top: 0;
+  position: relative;
+  font-size: 80px;
+  text-align: center;
 
-    margin: auto;
+  margin: auto;
 }
 
 .swiper {
@@ -158,13 +159,20 @@ body {
 }
 
 .VideoText {
+  text-align: left;
+  text-spacing-trim: normal;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
   margin-bottom: 30px;
   width: 750px;
   padding: 10px;
   height: fit-content;
+
+  p {
+    margin: 8px;
+  }
 
   border: 2px darkslateblue solid;
   background-color: azure;
