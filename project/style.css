@@ -146,3 +146,31 @@ body {
 
     margin: auto;
 }
+
+.swiper {
+  width: 700px;
+  height: fit-content;
+  border-radius: 20px;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+}
+
+.VideoText {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 750px;
+  padding: 10px;
+  height: fit-content;
+
+  border: 2px darkslateblue solid;
+  background-color: azure;
+  border-radius: 10px;
+
+  @media (max-width: 760px) {
+    width: 100%;
+  }
+}
